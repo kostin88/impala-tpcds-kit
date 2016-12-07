@@ -3,6 +3,14 @@
 
 **NOTICE: This repo contains modifications to the official TPC-DS specification so any results from this are not comparable to officially audited results.**
 
+## General Information
+
+Этот репозиторий - клон репозитория https://github.com/cloudera/impala-tpcds-kit от Cloudera.
+Оригинальный код не работает на версии CDH 5.9
+Внесены необходимые правки.
+
+**NOTICE: код от Cloudera (как и этот) создает только часть таблиц, доступных для генерации TPC-DS. Если нужны все доступные таблицы, то можно обратить внимание на fork https://github.com/leejianwei/impala-tpcds-kit
+
 ## Schema Information
 
 The following tables are currently used:
@@ -47,7 +55,7 @@ These scripts also assume that your $HOME directory is the same path on all Data
 ### Clone the Impala TPC-DS tools repo & Configure the HDFS directories
 
 * `cd $HOME` (use your `$HOME` directory as it's hard coded in some scripts for now)
-* clone this repo `git clone https://github.com/cloudera/impala-tpcds-kit`
+* clone this repo `git clone https://git.glowbyteconsulting.com/scm/~petr.kostin/impala-tpcds-kit.git`
 * `cd impala-tpcds-kit`
 * Edit `tpcds-env.sh` and modify as needed.  The defaults assume you have a `/user/$USER` directory in HDFS.  If you don't, run these commands:
   * `sudo -u hdfs hdfs dfs -mkdir /user/$USER`
