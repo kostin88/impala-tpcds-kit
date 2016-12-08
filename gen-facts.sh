@@ -25,3 +25,5 @@ do
     -QUIET Y | hdfs dfs -put - ${FLATFILE_HDFS_ROOT}/${t}/${t}_${c}_${DSDGEN_TOTAL_THREADS}.dat &
 done
 wait
+
+echo "Generate parts $(( $start ))..$(( $count + $start )) done"
