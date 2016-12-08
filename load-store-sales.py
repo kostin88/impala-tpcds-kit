@@ -20,7 +20,7 @@ LOAD_FILE = "load_store_sales_tmp.sql"
 
 def get_mem_limit():
     """Get the memory limit of an Impala daemon"""
-    return float(IMPALA_MEM_LIMIT)
+    return float(IMPALA_MEM_LIMIT) / (1024**3)
 
 
 def get_num_backends():
